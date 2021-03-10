@@ -1,0 +1,9 @@
+{
+  "useExtendedLib": {
+    "kbone": true,
+    "weui": true
+  },
+  "usingComponents": {
+
+  }
+}

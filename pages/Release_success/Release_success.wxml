@@ -1,0 +1,11 @@
+<!--pages/Release_success/Release_success.wxml-->
+<view class="succ">
+    <icon size="90" type="success" role="img"></icon>
+    <view class="dec"><text>成功发布</text></view>
+    <view class="tip">
+        <text>你的轿车托运信息已通知给轿车托运公司，请留意【奥辰汽车】公众号及短信的报价通知</text>
+    </view>
+</view>
+
+<button type="primary" bindtap="lookmycar">查看我的轿车</button>
+<button type="warn" class="warn">有报价短信通知我</button>

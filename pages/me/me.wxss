@@ -1,0 +1,155 @@
+/* pages/me/me.wxss */
+.fr{
+    float: right;
+}
+.fl{
+    float: left;
+}
+page{
+    background-color: #f8f8f8;
+}
+.model{
+    padding: 0 10px;
+    box-sizing: border-box;
+    height: 80rpx;
+    line-height: 80rpx;
+    color: #999999;
+    font-size: 15px;
+}
+.detailList{
+    border-top: 1px solid #d9d9d9;
+    width: 100%;
+    background-color: #ffffff;
+    padding: 0 10px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #d9d9d9;
+}
+.listitem{
+    height: 100rpx;
+    line-height: 100rpx;
+    border-bottom: 1px solid #d9d9d9;
+}
+.itemName{
+    font-size: 18px;
+    text-align: left;
+    font-weight: 520;
+    font-family: '黑体';
+}
+.listitem .fl{
+    width: 205rpx;
+    height: 100rpx;
+}
+.input_phonenum{
+    height: 100rpx;
+    line-height: 100rpx;
+    width: 610rpx;
+}
+.input_canspwd{
+    height: 100rpx;
+    line-height: 100rpx;
+    width: 327rpx;
+    border-right: 1px solid #d9d9d9;
+}
+.yanzheng{
+    
+    height: 100rpx;
+    line-height: 100rpx;
+    color: #3fc320;
+    text-align: center;
+}
+.loginafter{
+    width: 100%;
+    overflow: hidden;
+}
+.touxiang_nicheng{
+    padding: 30rpx 10rpx 0 20rpx;
+    box-sizing: border-box;
+    width: 100%;
+    overflow: hidden;
+}
+.touxiang{
+    width: 150rpx;
+    height: 150rpx;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.touxiang image{
+    width: 150rpx;
+    height: 150rpx;
+    
+}
+.nicheng{
+    height: 150rpx;
+    line-height: 150rpx;
+    text-align: left;
+    margin-left: 20rpx;
+}
+.nichengname{
+    height: 75rpx;
+    line-height: 100rpx;
+}
+.nichengjieshao{
+    height: 75rpx;
+    line-height: 70rpx;
+    font-size: 13px;
+    color: #999999;
+}
+.logined_phone{
+    margin-top: 30rpx;
+    overflow: hidden;
+    width: 100%;
+    height: 90rpx;
+    line-height: 90rpx;
+    background-color: #ffffff;
+    padding: 0rpx 10rpx 0 20rpx;
+    box-sizing: border-box;
+    border-top: 1px solid #d9d9d9;
+    border-bottom: 1px solid #d9d9d9;
+}
+.logined_phone .fl{
+    font-size: 16px;
+}
+.logined_phone .fr{
+    color: #999999;
+}
+.mycar{
+    padding: 10rpx 10rpx 0 20rpx;
+    box-sizing: border-box;
+    color: #999999;
+}
+/* pages/index/index.wxss */
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+
+.list{
+    width: 100%;
+    /* height: 250rpx; */
+    overflow: hidden;
+    margin-top: 15rpx;
+    padding: 28rpx 40rpx 30rpx 40rpx;
+    box-sizing: border-box;
+    background-color: #ffffff;
+
+}
+.line{
+    width: 100%;
+    height: 40rpx;
+    margin-bottom: 37rpx;
+    line-height: 40rpx;
+}
+.dsc{
+    color: #c8c8c8;
+}
+.time image{
+    width: 17px;
+    height: 17px;
+    margin-top: 3px;
+    margin-right: 3px;
+}
+.carNmae{
+    width: 100%;
+}

@@ -1,0 +1,26 @@
+/* pages/Release_success/Release_success.wxss */
+/* @import 'weui-miniprogram/weui-wxss/dist/style/weui.wxss' */
+.succ{
+    width: 100%;
+    text-align: center;
+    height: 500rpx;
+    padding-top: 50rpx;
+    box-sizing: border-box;
+}
+.succ .dec{
+    margin-top: 40rpx;
+    font-size: large;
+}
+.tip{
+    font-size: 26rpx;
+    margin-top: 30rpx;
+    color: #999999;
+}
+button{
+    margin-top: 20rpx;
+
+}
+.warn{
+    background-color: red;
+    color: #ffffff;
+}

@@ -1,0 +1,52 @@
+<!--pages/search/search.wxml-->
+<view class="title">
+    <view class="fl leiji">
+        <view class="line1 line">
+            <text>累计收到轿车</text>
+        </view>
+        <view class="line2 line">
+            <text>托运公司报价</text>
+        </view>
+    </view>
+    <view class="fl num"><text>748222</text></view>
+    <view class="ge fl">
+        <view class="kuai"></view>
+        <view>个</view>
+    </view>
+</view>
+<view class="tip"><text>选择车型、始发城市和目的城市</text></view>
+<view class="tiaojianxuanze">
+    <view class="list">
+        <form action="post">
+            <view class="item">
+                <view class="fl carmodel"><text>车型</text></view>
+                <view class="fl"><input class="cityinput" bindfocus="bindfocus" placeholder="请选择车型"
+                        value="{{carmodel}}" /></view>
+            </view>
+            <view class="item">
+                <view class="fl carmodel"><text>始发城市</text></view>
+                <view class="fl citystart">
+                    <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}"
+                        class="citystart">
+                        <view class="picker">
+                            {{region}}
+                        </view>
+                    </picker>
+                </view>
+            </view>
+            <view class="item item3">
+                <view class="fl carmodel"><text>目的城市</text></view>
+                <view class="fl citystart">
+                    <picker mode="region" bindchange="bindRegionChange1" value="{{region}}" custom-item="{{customItem}}"
+                        class="citystart">
+                        <view class="picker">
+                            {{region1}}
+                        </view>
+                    </picker>
+                </view>
+            </view>
+        </form>
+    </view>
+</view>
+
+<view class="button_confirm"><button type="primary" bindtap="priceres">试算轿车托运价格</button></view>

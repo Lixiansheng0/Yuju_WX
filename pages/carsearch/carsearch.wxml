@@ -1,0 +1,27 @@
+<!--pages/carsearch/carsearch.wxml-->
+<!-- <view class="chasearch_inp">
+    <input type="text" name="inp" class="inp" id="inp" placeholder="搜索车型名称" placeholder-class="hoder" />
+</view> -->
+
+<view class="search">
+    <view class="search_input">
+        <input class="search_input" maxlength="50" bindinput="bindKeyInput" placeholder="搜索车型名称" />
+    </view>
+</view>
+<block wx:for="{{carlist}}" wx:key='index' data="{{item}}" >
+    <view class="list" bindtap="carlist" data-name="{{item.model}}">
+        <view class="listitem">
+            <view class="model">
+                <text>{{item.model}}</text>
+            </view>
+            <view class="brand">
+                <text>{{item.brand}}</text>
+                <image src="../../images/right.png"></image>
+            </view>
+        </view>
+
+    </view>
+</block>
+<view class="dixian">
+{{moreInfo}}
+</view>

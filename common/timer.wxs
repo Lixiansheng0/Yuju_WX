@@ -1,0 +1,83 @@
+// 强行统一格式
+var filter = {
+    numberToTime: function (date) {
+        var re = "00"
+  
+        var timestamp = getDate().getTime();//wxs中不能使用js中的Date()函数，只能使用getDate()来获取当前标准时间，getTime()函数可以用来将标准时间转换为时间戳，单位为ms
+        timestamp = parseInt(timestamp / 1000)
+        console.log('当前',timestamp);
+        //发表文章的时间戳 s
+        var publicstamp = date;
+    
+        //时间差s
+        // console.log(publicstamp);
+        var gap = timestamp - publicstamp
+        // console.log(gap);
+        if (gap < 60) {
+          re = "刚刚"
+        } else if (gap < 60 * 60) {
+          re = parseInt(gap / 60) + "分钟前"
+        } else if (gap < 60 * 60 * 24) {
+          re = parseInt(gap / 60 / 60) + "小时前"
+        } else if (gap < 60 * 60 * 24 * 30) {
+          re = parseInt(gap / 60 / 60 / 24) + "天前"
+        } else if(gap<60*60*24*30*12){
+          re = parseInt(gap / 60 / 60 / 24 /30) + "月前"
+        }else{
+            re = parseInt(gap / 60 / 60 / 24 /30/12) +'年前'
+        }
+      return re
+    }
+}
+
+var clearnull= {
+  clearnull:function clearnull(e){
+    if(e){
+      return e
+    }
+    else{
+      return '0'
+    }
+  }
+}
+
+var buttonshow ={
+  buttonshow:function buttonshow(price){
+    if(price){
+      return true
+    }
+    else{
+      return false
+    }
+  }
+}
+
+var hideprice = {
+  hideprice:function(w){
+    if(w){
+      return w
+    }
+    else{
+      return "仅车主可见"
+    }
+  }
+}
+
+var menu = {
+  menu:function menu(e){
+    if(e==0){
+      return '正等待出价'
+    }
+    else{
+      return '已接受出价'
+    }
+  }
+}
+
+module.exports = {
+    numberToTime: filter.numberToTime,
+    clearnull:clearnull.clearnull,
+    buttonshow:buttonshow.buttonshow,
+    hideprice:hideprice.hideprice,
+    menu:menu.menu
+}

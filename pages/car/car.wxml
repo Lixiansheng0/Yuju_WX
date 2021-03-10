@@ -1,0 +1,78 @@
+<!--pages/car/car.wxml-->
+<view class="tip"><text>选择车型、始发城市和目的城市</text></view>
+<form bindsubmit="formSubmit" method="post">
+    <view class="tiaojianxuanze">
+        <view class="list">
+            
+                <view class="item">
+                    <view class="fl carmodel"><text>车型</text></view>
+                    <view class="fl"><input name='model' class="cityinput" bindfocus="bindfocus" placeholder="请选择车型"value="{{carmodel}}"  /></view>
+                </view>
+                <view class="item">
+                    <view class="fl carmodel"><text>始发城市</text></view>
+                    <view class="fl citystart">
+                        <picker name='origin' mode="region" bindchange="bindRegionChange" value="{{region}}"
+                            custom-item="{{customItem}}" class="citystart">
+                            <view class="picker">
+                                {{region}}
+                            </view>
+                        </picker>
+                    </view>
+                </view>
+                <view class="item item3">
+                    <view class="fl carmodel"><text>目的城市</text></view>
+                    <view class="fl citystart">
+                        <picker name='destination' mode="region" bindchange="bindRegionChange1" value="{{region}}"
+                            custom-item="{{customItem}}" class="citystart">
+                            <view class="picker">
+                                {{region1}}
+                            </view>
+                        </picker>
+                    </view>
+                </view>
+            
+        </view>
+    </view>
+
+    <view class="tip"><text>轿车信息</text></view>
+    <view class="carmes">
+        <view class="carmes_item">
+            <view class="fl desname"><text>轿车数量</text></view>
+            <input name="amount" class="fl mesinp" type="number" bindinput="isnull" />
+        </view>
+        <view class="carmes_item2 ">
+            <view class="fl desname"><text>单台车估价</text></view>
+            <input name='price' class="fl mesinp" type="digit" placeholder="请输入数字（万元）"bindinput="isnull" />
+        </view>
+    </view>
+    <view class="tip2"><text>包含保险的报价会参考轿车估价</text></view>
+
+
+    <view class="carmes1">
+        <checkbox-group name='checkbox'>
+            <label class="checkbox" wx:for="{{items}}" wx:key="index">
+            <view class="check">
+                <checkbox value="{{item.name}}" checked="{{item.checked}}" />{{item.value}}
+            </view>
+            
+            </label>
+        </checkbox-group>
+        
+    </view>
+
+    <view class="tip"><text>联系人</text></view>
+    <view class="carmes">
+        <view class="carmes_item">
+            <view class="fl desname"><text>称呼</text></view>
+            <input name='name' class="fl mesinp" type="text" bindinput="isnull" />
+        </view>
+        <view class="carmes_item2 ">
+            <view class="fl desname"><text>手机号</text></view>
+            <input name='phone' class="fl mesinp" type="number" bindinput="isnull" />
+        </view>
+    </view>
+    <view class="tip2"><text>只有你接受报价的托运公司才可以联系你</text></view>
+
+    <view class="button_confirm"><button formType="submit" type="primary" bindtap="release">发布轿车托运信息</button></view>
+</form>
+

@@ -1,0 +1,78 @@
+page{
+    background-color: #ffffff;
+}
+.box{
+    background-color: #f8f8f8;
+    padding: 20rpx 10rpx;
+    box-sizing: border-box;
+}
+.cf{
+    overflow: hidden;
+}
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+.title{
+    width: 100%;
+    text-align: center;
+    margin-top: 10rpx;
+    margin-bottom: 30rpx;
+}
+.carModel{
+    margin-bottom: 10rpx;
+}
+.way{
+    width: 100%;
+    height: 210rpx;
+}
+.dao{
+    width: 64rpx;
+    height: 175rpx;
+    line-height: 175rpx;
+    text-align: center;
+    margin: 0 10rpx;
+}
+.kuang{
+    width: 300rpx;
+    height: 175rpx;
+    line-height: 175rpx;
+    border: 2px solid #dddddd;
+    text-align: center;
+    background-color: #fdfdfd;
+}
+.cityfrom{
+    width: 100%;
+    height: 80rpx;
+    color: #bababa;
+    line-height: 115rpx;
+}
+.cityto{
+    width: 100%;
+    height: 80rpx;
+    line-height: 80rpx;
+    font-weight: 700;
+}
+.baojia{
+    padding: 20rpx 10rpx;
+    box-sizing: border-box;
+}
+.num{
+    color: red;
+    margin: 0 5rpx;
+}
+.baojiadec{
+    width: 100%;
+    height: 50rpx;
+    line-height: 50rpx;
+}
+.price{
+    width: 100%;
+    height: 100rpx;
+    line-height: 100rpx;
+    text-align: center;
+    color: red;
+    font-size: 70rpx;
+}

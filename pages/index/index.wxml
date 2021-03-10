@@ -1,0 +1,40 @@
+<wxs module = "filter" src="../../common/timer.wxs"></wxs>
+<view class="box">
+    <block wx:for="{{listArr}}" wx:key='index'data="{{item}}">
+        <navigator url="../indexDetail/indexDetail?codeId={{item.id}}">
+            <view class="list" id="list">
+                <view class="line">
+                    <view class="num fl">
+                        <text class="dsc">编号：</text>
+                        <text>{{item.id}}</text>
+                    </view>
+                    <view class="state fr">
+                        <text class="dsc">状态：</text>
+                        <text>正等待出价</text>
+                    </view>
+                </view>
+
+                <view class="line">
+                    <view class="carName fl">
+                        <text class="dsc">车型：</text><text>{{item.model}}</text>
+                    </view>
+                </view>
+
+                <view class="line">
+                    <view class="distance fl">
+                        <text>{{item.origin}}</text> ==> <text>{{item.destination}}</text>
+                    </view>
+                    
+                </view>
+                <view class="line">
+                    <view class="time fr">
+                        <image src="../../images/time.png"></image>
+                        <text>{{filter.numberToTime(item.newstime)}}</text>
+                    </view>
+                </view>
+
+            </view>
+        </navigator>
+    </block>
+    <view class="dixian">{{moreInfo}}</view>
+</view>

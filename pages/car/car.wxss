@@ -1,0 +1,84 @@
+/* pages/car/car.wxss */
+@import'../search/search.wxss';
+.fr{
+    float: right;
+}
+.fl{
+    float: left;
+}
+.lableName{
+    padding: 0 10px;
+    box-sizing: border-box;
+    height: 80rpx;
+    line-height: 80rpx;
+    color: #999999;
+    font-size: 15px;
+}
+.detailList{
+    border-top: 1px solid #d9d9d9;
+    width: 100%;
+    background-color: #ffffff;
+    padding: 0 10px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #d9d9d9;
+}
+.listitem{
+    height: 100rpx;
+    line-height: 100rpx;
+    border-bottom: 1px solid #d9d9d9;
+}
+.itemName{
+    text-align: left;
+    font-weight: 520;
+    font-family: '黑体';
+    background-color: sandybrown;
+}
+.carmes{
+    background-color: #ffffff;
+    border-top: 1px solid #d9d9d9;
+    border-bottom: 1px solid #d9d9d9;
+}
+.carmes_item{
+    padding: 0 10rpx;
+    box-sizing: border-box;
+    height: 100rpx;
+    line-height: 100rpx;
+    border-bottom: 1px solid #d9d9d9;
+}
+.carmes_item2{
+    padding: 0 10rpx;
+    box-sizing: border-box;
+    height: 100rpx;
+    line-height: 100rpx;
+}
+.mesinp{
+    height: 100rpx;
+    line-height: 100rpx;
+}
+.desname{
+    width: 185rpx;
+}
+.tip2{
+    font-size: 26rpx;
+    color: #999999;
+    overflow: hidden;
+    padding: 0rpx 0 10rpx 10rpx;
+    box-sizing: border-box;
+    height: 80rpx;
+    line-height: 55rpx;
+}
+.check{
+    width: 100%;
+    height: 100rpx;
+    line-height: 100rpx;
+    border-bottom: 1px solid #d9d9d9;
+    padding: 0 10rpx;
+    box-sizing: border-box;
+}
+.carmes1{
+    background-color: #ffffff;
+    border-top: 1px solid #d9d9d9;
+}
+.button_confirm{
+    margin-top:30rpx ;
+}

@@ -1,0 +1,23 @@
+<!--pages/priceres/priceres.wxml-->
+<view class="box">
+    <view class="carModel"><text>车型1：</text><text>{{carmodel1}}</text></view>
+
+    <view class="way">
+        <view class="way_start fl kuang">
+            <view class="fl cityfrom"><text>始发城市</text></view>
+            <view class="fl cityto"><text>{{cityfrom}}</text></view>
+        </view>
+        <view class="dao fl">==></view>
+        <view class="way_end fl kuang">
+            <view class="fl cityfrom"><text>目的城市</text></view>
+            <view class="fl cityto"><text>{{cityto}}</text></view>
+
+        </view>
+    </view>
+</view>
+
+<view class="baojia cf">
+    <view class="baojiadec">
+        <view class="fl">e货运轿车托运市场</view><view class="fl num" >6</view> <view class="fl">次的平均报价为：</view> </view>
+    <view class="price">￥3256</view>
+</view>

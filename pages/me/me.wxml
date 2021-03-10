@@ -1,0 +1,113 @@
+<!--pages/me/me.wxml-->
+<wxs module = "filter" src="../../common/timer.wxs"></wxs>
+<wxs module = "menu" src="../../common/timer.wxs"></wxs>
+<view class="prelogin" wx:if="{{isshow}}">
+
+    <view class="model"><text>还未绑定手机号</text></view>
+
+    <form bindsubmit='loginForm'>
+
+        <view class="detailList">
+            <view class="listitem">
+                <view class="fl">
+                    <text class="itemName">手机号</text>
+                </view>
+                <view class="fl">
+                    <input bindinput='getInputValue' class="input_phonenum" name='username' type="number"
+                        placeholder="请输入手机号" bindinput="phone" />
+                </view>
+            </view>
+            <view class="listitem">
+                <view class="fl">
+                    <text class="itemName">验证码</text>
+                </view>
+                <view class="fl">
+                    <input class="input_canspwd" name='password' type="text" placeholder="请输入验证码"
+                        bindinput="password" />
+                </view>
+                <view class="fr yanzheng" bindtap="yanzhengFn">
+                    <text>{{getyzm}}</text>
+                </view>
+            </view>
+        </view>
+
+    </form>
+
+
+    <view class="model"><text>绑定手机号后，查看我的轿车</text></view>
+
+    <view>
+        <button type="primary" bindtap="login" open-type="getUserInfo" bindgetuserinfo="getUserInfo">绑定</button>·
+    </view>
+
+</view>
+
+<view class="loginafter" wx:else>
+    <view class="touxiang_nicheng">
+        <view class="touxiang fl">
+            <image src="{{userInfo.avatarUrl}}"></image>
+        </view>
+        <view class="nicheng fl">
+            <view class="nichengname">Hi {{userInfo.nickName}}</view>
+            <view class="nichengjieshao"><text>欢迎来到奥辰汽车</text></view>
+        </view>
+    </view>
+
+    <view class="logined_phone">
+        <view class="fl"><text>手机号</text></view>
+        <view class="fr"><text>{{userpho}}</text></view>
+    </view>
+
+    <view class="mycar">
+        <view>
+            <text>我的轿车</text>
+        </view>
+
+        <view class="box" wx:if="{{boxshow}}">
+            <block wx:for="{{mycarlist}}" wx:key='index'>
+
+                <view class="list" id="list">
+                    <view class="line">
+                        <view class="num fl">
+                            <text class="dsc">编号：</text>
+                            <text>{{item.id}}</text>
+                        </view>
+                        <view class="state fr">
+                            <text class="dsc">状态：</text>
+                            <text>{{menu.menu(item.state) }}</text>
+                        </view>
+                    </view>
+
+                    <view class="line">
+                        <view class="carName fl">
+                            <text class="dsc">车型：</text><text>{{item.model}}</text>
+                        </view>
+                    </view>
+
+                    <view class="line">
+                        <view class="distance fl">
+                            <text>{{item.origin}}</text> ==> <text>{{item.destination}}</text>
+                        </view>
+                        
+                    </view>
+
+                    <view class="line">
+                        <view class="time fr">
+                            <image src="../../images/time.png"></image>
+                            <text>{{filter.numberToTime(item.newstime)}}</text>
+                        </view>
+                    </view>
+
+                    <view class="line">
+                        <view class="fl"> <button bindtap="lookprice" data-startcity="{{item.origin}}"data-endcity="{{item.destination}}" data-id="{{item.id}}" data-carmodel="{{item.model}}" type="primary" plain="true"
+                                size="mini">查看报价</button></view>
+                        <view class="fr"><button data-id="{{item.id}}" type="default" plain="true" size="mini"
+                                bindtap="quxiao">取消托运</button>
+                        </view>
+                    </view>
+                </view>
+            </block>
+        </view>
+
+    </view>
+</view>

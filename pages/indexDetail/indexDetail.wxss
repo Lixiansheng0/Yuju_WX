@@ -1,0 +1,93 @@
+/* pages/indexDetail/indexDetail.wxss */
+page{
+    background-color: #ffffff;
+}
+.box{
+    background-color: #f8f8f8;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+.title{
+    width: 100%;
+    text-align: center;
+    margin-top: 10rpx;
+    margin-bottom: 30rpx;
+}
+.carModel{
+    margin-bottom: 10rpx;
+}
+.way{
+    width: 100%;
+    height: 210rpx;
+}
+.dao{
+    width: 64rpx;
+    height: 175rpx;
+    line-height: 175rpx;
+    text-align: center;
+    margin: 0 10rpx;
+}
+.kuang{
+    width: 300rpx;
+    height: 175rpx;
+    line-height: 175rpx;
+    border: 2px solid #dddddd;
+    text-align: center;
+    background-color: #fdfdfd;
+}
+.cityfrom{
+    width: 100%;
+    height: 80rpx;
+    color: #bababa;
+    line-height: 115rpx;
+}
+.cityto{
+    width: 100%;
+    height: 80rpx;
+    line-height: 47rpx;
+    font-weight: 700;
+}
+.detailList{
+    border-top: 2px solid #d9d9d9;
+    width: 100%;
+    background-color: #ffffff;
+    padding: 0 10px;
+    box-sizing: border-box;
+    border-bottom: 2px solid #d9d9d9;
+}
+.listitem{
+    height: 100rpx;
+    line-height: 100rpx;
+    border-bottom: 1px solid #d9d9d9;
+}
+.listitem1{
+    height: 100rpx;
+    line-height: 100rpx;
+}
+.itemName{
+    text-align: left;
+    font-weight: 520;
+    font-family: '黑体';
+}
+.itemCon{
+    text-align: right;
+    color: #999999;
+    font-family: '黑体';
+    font-weight: 520;
+}
+.listitem .num{
+    color: red;
+}
+button{
+    margin-top: 30rpx;
+    margin-bottom: 30rpx;
+}
+/* .carowner{
+    background-color: tomato;
+} */

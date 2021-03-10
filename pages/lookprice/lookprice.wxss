@@ -1,0 +1,15 @@
+/* pages/lookprice/lookprice.wxss */
+@import"../priceres/priceres.wxss";
+@import"../index/index.wxss";
+.distance{
+    margin-right: 20rpx;
+}
+.zanwushuju{
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+    font-size: 34rpx;
+}
+.jieshou{
+    margin-left: 14rpx;
+}

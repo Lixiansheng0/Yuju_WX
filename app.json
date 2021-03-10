@@ -1,0 +1,54 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/logs/logs",
+        "pages/me/me",
+        "pages/car/car",
+        "pages/search/search",
+        "pages/indexDetail/indexDetail",
+        "pages/medatail/madatail",
+        "pages/carsearch/carsearch",
+        "pages/priceres/priceres",
+        "pages/car_carmodellist/car_carmodellist",
+        "pages/Release_success/Release_success",
+        "pages/lookprice/lookprice"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#13227a",
+        "navigationBarTitleText": "奥辰汽车供应链",
+        "navigationBarTextStyle": "white"
+    },
+    "tabBar": {
+        "color": "#999",
+        "selectedColor": "#51B897",
+        "list": [
+            {
+                "pagePath": "pages/index/index",
+                "text": "轿车列表",
+                "iconPath": "images/list.png",
+                "selectedIconPath": "images/listS.png"
+            },
+            {
+                "pagePath": "pages/car/car",
+                "text": "托运轿车",
+                "iconPath": "images/car.png",
+                "selectedIconPath": "images/carS.png"
+            },
+            {
+                "pagePath": "pages/search/search",
+                "text": "查询价格",
+                "iconPath": "images/search.png",
+                "selectedIconPath": "images/searchS.png"
+            },
+            {
+                "pagePath": "pages/me/me",
+                "text": "我",
+                "iconPath": "images/me.png",
+                "selectedIconPath": "images/meS.png"
+            }
+        ]
+    },
+    "style": "v2",
+    "sitemapLocation": "sitemap.json"
+}

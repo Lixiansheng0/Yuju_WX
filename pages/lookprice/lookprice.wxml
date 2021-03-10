@@ -1,0 +1,65 @@
+<!--pages/lookprice/lookprice.wxml-->
+<wxs module = "buttonshow" src="../../common/timer.wxs"></wxs>
+<wxs module = "hideprice" src="../../common/timer.wxs"></wxs>
+<view class="box">
+    <view class="carModel"><text>车型：</text><text>{{carmodel}}</text></view>
+
+    <view class="way">
+        <view class="way_start fl kuang">
+            <view class="fl cityfrom"><text>始发城市</text></view>
+            <view class="fl cityto"><text>{{oricity}}</text></view>
+        </view>
+        <view class="dao fl">==></view>
+        <view class="way_end fl kuang">
+            <view class="fl cityfrom"><text>目的城市</text></view>
+            <view class="fl cityto"><text>{{deccity}}</text></view>
+
+        </view>
+    </view>
+</view>
+
+<view class="baojia">
+    报价列表：
+    <view wx:if="{{showprice}}">
+        <block wx:for="{{companylist}}" wx:key='index' data="{{item}}">
+
+            <view class="list" id="list">
+                <view class="line">
+                    <view class="num fl">
+                        <text class="dsc">报价：</text>
+                        <text>{{hideprice.hideprice(item.price)}}</text>
+                    </view>
+                    <view class="state fr">
+                        <text class="dsc">状态：</text>
+                        <text>{{item.state}}</text>
+                    </view>
+                </view>
+
+                <view class="line">
+                    <view class="carName fl">
+                        <text class="dsc">公司：</text><text>{{item.name}}</text>
+                    </view>
+                </view>
+
+                <view class="line">
+                    <view class="distance fl">
+                        ★★★★★
+                    </view>
+                    <view class="time fl">
+                        <text>点评数</text>
+                    </view>
+                    <view class="fr" wx:if="{{buttonshow.buttonshow(item.price)}}">
+                        <view wx:if="{{buttonshow}}" class="jieshou fr"><button size="mini" type="primary" bindtap="accept" data-id="{{item.id}}">接受</button></view>
+                        <view wx:if="{{buttonshow}}" class="jujue fr"><button size="mini" type="warn" bindtap="refuse" data-id="{{item.id}}">拒绝</button></view>
+                    </view>
+
+                </view>
+            </view>
+        </block>
+    </view>
+    <view wx:else>
+        <view class="zanwushuju">
+            暂无报价
+        </view>
+    </view>
+</view>

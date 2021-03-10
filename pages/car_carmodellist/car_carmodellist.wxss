@@ -1,0 +1,65 @@
+/* pages/car_carmodellist/car_carmodellist.wxss */
+@import"../carsearch/carsearch.wxss";/* pages/carsearch/carsearch.wxss */
+.chasearch_inp{
+    width: 100%;
+    height: 100rpx;
+    padding: 20rpx;
+    box-sizing: border-box;
+    background-color: #f8f8f8;
+}
+.inp{
+    background-color: #ffffff;
+    padding-left: 30rpx;
+    box-sizing: border-box;
+    height: 60rpx;
+    line-height: 60rpx;
+    border-radius: 8px;
+}
+.hoder{
+    font-size: 20rpx;
+    color: #999999;
+}
+.search{
+    padding: 20rpx;
+    box-sizing: border-box;
+}
+.search_input{
+    background-color: #ebecec;
+    height: 80rpx;
+    line-height: 80rpx;
+    border-radius: 15px;
+    padding-left: 15rpx;
+    box-sizing: border-box;
+}
+.list{
+    width: 100%;
+    padding-left: 20rpx;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.listitem{
+    height: 100rpx;
+    line-height: 100rpx;
+    border-bottom: 1px solid #d9d9d9;
+    padding-right: 10rpx;
+    box-sizing: border-box;
+}
+.model{
+    float: left;
+}
+.brand{
+    height: 100rpx;
+    line-height: 100rpx;
+    float: right;
+    color: #999999;
+    font-size: 30rpx;
+}
+.brand image{
+    width: 20rpx;
+    height: 20rpx;
+    margin-left: 10rpx;
+}
+.dixian{
+    text-align: center;
+    color: #999999;
+}

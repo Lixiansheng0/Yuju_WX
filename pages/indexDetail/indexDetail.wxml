@@ -1,0 +1,110 @@
+<!--pages/indexDetail/indexDetail.wxml-->
+<wxs module="clearnull" src="../../common/timer.wxs"></wxs>
+<wxs module = "filter" src="../../common/timer.wxs"></wxs>
+<view class="box">
+    <view class="title"><text>编号：</text><text>{{indexDetailList.id}}</text></view>
+    <view class="carModel"><text>车型：</text><text>{{indexDetailList.model}}</text></view>
+
+    <view class="way">
+        <view class="way_start fl kuang">
+            <view class="fl cityfrom"><text>始发城市</text></view>
+            <view class="fl cityto"><text>{{indexDetailList.origin}}</text></view>
+        </view>
+        <view class="dao fl">==></view>
+        <view class="way_end fl kuang">
+            <view class="fl cityfrom"><text>目的城市</text></view>
+            <view class="fl cityto"><text>{{indexDetailList.destination}}</text></view>
+
+        </view>
+    </view>
+</view>
+
+<view class="detailList">
+    <view class="listitem">
+        <view class="fl">
+            <text class="itemName">托运状态</text>
+        </view>
+        <view class="fr">
+            <text class="itemCon">正等待出价</text>
+        </view>
+    </view>
+    <view class="listitem">
+        <view class="fl">
+            <text class="itemName">轿车数量</text>
+        </view>
+        <view class="fr">
+            <text class="num">{{indexDetailList.amount}}</text>
+            <text class="itemCon">辆</text>
+        </view>
+    </view>
+    <view class="listitem">
+        <view class="fl">
+            <text class="itemName">车主</text>
+        </view>
+        <view class="fr carowner">
+            <text class="itemCon">{{indexDetailList.name}}</text>
+        </view>
+    </view>
+    <view class="listitem">
+        <view class="fl">
+            <text class="itemName">车主电话</text>
+        </view>
+        <view class="fr">
+            <text class="itemCon">接受报价后可见</text>
+        </view>
+    </view>
+    <view class="listitem">
+        <view class="fl">
+            <text class="itemName">轿车状况</text>
+        </view>
+        <view class="fr">
+            <text class="itemCon">{{indexDetailList.conditions}}</text>
+        </view>
+    </view>
+    <view class="listitem">
+        <view class="fl">
+            <text class="itemName">轿车估值</text>
+        </view>
+        <view class="fr">
+            <text class="itemCon">{{indexDetailList.price}}万</text>
+        </view>
+    </view>
+    <view class="listitem">
+        <view class="fl">
+            <text class="itemName">已有报价个数</text>
+        </view>
+        <view class="fr">
+            <text class="num">{{clearnull.clearnull(indexDetailList.quotationNumber) }}</text>
+        </view>
+    </view>
+    <view class="listitem">
+        <view class="fl">
+            <text class="itemName">目前最低报价</text>
+        </view>
+        <view class="fr">
+            <text class="num">{{clearnull.clearnull(indexDetailList.minPrice)}}</text>
+        </view>
+    </view>
+    <view class="listitem">
+        <view class="fl">
+            <text class="itemName">发布日期</text>
+        </view>
+        <view class="fr">
+            <text class="itemCon">{{filter.numberToTime(release_date)}}</text>
+        </view>
+    </view>
+    <!-- <view class="listitem1">
+        <view class="fl">
+            <text class="itemName">接受微信报价通知</text>
+        </view>
+        <view class="fr">
+            <switch type="switch"></switch>
+        </view>
+    </view> -->
+</view>
+
+<view class="btn-area">
+    <button type="primary" bindtap="lookprice" data-id="{{indexDetailList.id}}" data-model="{{indexDetailList.model}}" data-ori="{{indexDetailList.origin}}" data-des="{{indexDetailList.destination}}">查看报价</button>
+    <button type="warn" bindtap="tongzhi">有报价短信通知我</button>
+
+</view>
