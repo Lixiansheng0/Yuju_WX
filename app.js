@@ -18,6 +18,47 @@ function formatDuring(mss) {
   }
   return days + " 天 " + hours + " 小时 " + minutes + " 分钟前" ;
 }
+const http=(url,data,that,)=>{
+  wx.request({
+    url: url,
+    method:"POST",
+    data:data,
+    header: {
+      'content-type': 'application/x-www-form-urlencoded' //修改此处即可
+    },
+    dataType:'json',
+    success:res=>{
+      console.log(res.data);
+      let arr = res.data.list;
+      app.globalData.indexarr = arr
+      that.setData({
+        listArr:app.globalData.indexarr
+      })
+    }
+  })
+}
+/**
+ * wx.request({
+          url: config.hostName +config.indexUrl,
+          method:'POST',
+          data:{
+            "begin":this.data.begin,
+            "count":this.data.count
+          },
+          header: {
+            'content-type': 'application/x-www-form-urlencoded' //修改此处即可
+          },
+          dataType:'json',
+          success:res=>{
+            console.log(res.data.list);
+            let arr = res.data.list;
+            app.globalData.indexarr = arr
+            this.setData({
+              listArr:app.globalData.indexarr
+            })
+          }
+        })
+ */
 App({
   onLaunch() {
     // 展示本地存储能力
